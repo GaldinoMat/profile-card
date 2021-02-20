@@ -5,10 +5,12 @@
   --Dark-gray: hsl(0, 0%, 59%);
 }
 
+/* General sizings */
 * {
   padding: 0;
   margin: 0;
   font-family: "Kumbh Sans", sans-serif;
+  font-size: 18px;
 }
 
 body {
@@ -23,19 +25,116 @@ body {
   background-position: right 50vw bottom 20vh, left 50vw top 40vh;
 }
 
+p {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--Dark-gray);
+}
+
+a {
+  text-decoration: none;
+  color: var(--Dark-grayish-blue);
+}
+
+/* Container sizing */
 .card-container {
-  margin: 200px auto;
-  width: 250px;
+  margin: 170px auto 80px auto;
+  width: 330px;
+  height: 350px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  border-radius: 20px;
+  background-color: white;
 }
 
+/* Top image pattern */
 .top-image {
   width: 100%;
 }
 
 .top-image img {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
   width: 100%;
+}
+
+/* Profile picture */
+.profile-image {
+  margin-bottom: 0;
+  position: relative;
+  bottom: 60px;
+}
+
+.profile-image img {
+  border-radius: 100px;
+  border: 5px solid white;
+}
+
+/* Text box */
+.text-box {
+  width: 100%;
+  text-align: center;
+  margin-top: -40px;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--Very-dark-desaturated-blue);
+}
+.name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.name .title {
+  margin-right: 10px;
+}
+
+.name p {
+  font-size: 18px;
+}
+
+.location {
+  margin: 10px auto 20px auto;
+}
+
+.stats-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-right: 14px;
+  margin-bottom: 20px;
+}
+
+.stat p {
+  padding-bottom: 5px;
+}
+
+/* Misc */
+hr {
+  height: 0.1px;
+  opacity: 0.25;
+  background-color: var(--Dark-cyan);
+  margin-bottom: 25px;
+}
+
+/* Media Queries */
+@media screen and (min-width: 375px) and (max-width: 1440px) {
+  .card-container {
+    max-width: 18rem;
+  }
+
+  .attribution {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .attribution {
+    display: none;
+  }
 }
